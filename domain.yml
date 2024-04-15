@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - order_pizza
+  - order_food
+  - inform_food
+  - thank
+
+entities:
+  - food
+
+actions:
+  - action_extract_food_entity
+  - action_order_food
+  - action_confirm_order
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you? Welcome to luxury hotel, I'm here to help you order food."
+  - text: "Hello there! Welcome to luxury hotel, I'm here to help you order food."
+  - text: "Hey how can i assist you today?"
+  
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "What makes you feel sad?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+  - text: "Was your problem solved?"
+  - text: "Was that helpful?"
+
+  utter_happy:
+  - text: "Great, carry on! Or do you want food ordering assistance?"
+  - text: "Im happy to hear that. I think i'm also happy since I can interact with humans."
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Good bye, pleasure to interact with you."
+  - text: "Bye and have a fantastic day ahead."
+  - text: "Did you get help?"
+
+  utter_iamabot:
+  - text: "I am a bot, I was created by Nick~Tech."
+  
+
+  utter_order_pizza:
+  - text: "Sure i will order pizza for you."
+  - text: "What kind of pizza you want?"
+
+  utter_thank:
+  - text: "Welcome! pleasure to assist you"
+  - text: "Welcome"
+
+
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
